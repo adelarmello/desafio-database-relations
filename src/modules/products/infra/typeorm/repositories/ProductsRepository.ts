@@ -64,11 +64,11 @@ class ProductsRepository implements IProductsRepository {
       );
 
       if (!productFind) {
-        throw new AppError('Product not find');
+        throw new AppError('Produto não foi encontrado');
       }
 
       if (productData.quantity < productFind.quantity) {
-        throw new AppError('Insufficient product quantity');
+        throw new AppError('Quantidade insuficiente de produto!');
       }
 
       const newProduct = productData;
